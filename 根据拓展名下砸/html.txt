@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/pacman-favicon.ico" type="image/x-icon">
+    <title>Midterm Preparation - CS 188: Introduction to Artificial Intelligence, Spring 2019</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fullcalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.qtip.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="assets/js/jquery.qtip.min.js" type="text/javascript"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.min.js"></script>
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  </head>
+
+  <body data-spy="scroll" data-target="#navscroll">
+
+    <div id="navscroll">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="." style="color: #000;"><strong>CS 188</strong> | Spring 2019</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+              
+              
+              
+  
+
+  
+    
+      <li><a href="/~cs188/sp19/">Syllabus</a></li>
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      <li><a href="/~cs188/sp19/policies.html">Policies</a></li>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      <li><a href="/~cs188/sp19/projects.html">Projects</a></li>
+    
+  
+
+  
+    
+      <li><a href="/~cs188/sp19/schedule.html">Schedule</a></li>
+    
+  
+
+  
+    
+      <li><a href="/~cs188/sp19/staff.html">Staff</a></li>
+    
+  
+
+
+
+
+            </ul>
+          </div>
+        </div>
+        </div>
+      </nav>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script>var $j = jQuery.noConflict(true);</script>
+    <script>
+      $(document).ready(function(){
+       console.log($().jquery); // This prints v1.11.0
+       console.log($j().jquery); // This prints v3.1.0
+      });
+    </script>
+    <script src="assets/js/parallax.min.js"></script>
+
+      <div class='container'>
+        <div class="main-container">
+	    <div class='row'>
+  <h1 class="project_title"> Final Exam Preparation</h1>
+  <p>The Final exam will be held on <b>Thursday, May 16, 7:00-10:00 pm</b> in the
+    <b><a href="https://recsports.berkeley.edu/rsf/">RSF Fieldhouse</a></b>.
+    DSP students should have received an email from us about final exam instructions.</p>
+  <!-- The room locations will be determined be the <b> last two digits of your SID:</b> -->
+  <!-- <ul>
+  <b> 00 - 26:</b> VLSB 2050 <br>
+  <b> 27 - 41:</b> Evans 10 <br>
+  <b> 42 - 54:</b> Hearst Annex A1 <br>
+  <b> 55 - 69:</b> Dwinelle 145 <br>
+  <b> 70 - 81:</b> GPB 100 <br>
+  <b> 82 - 91:</b> Latimer 120 <br>
+  <b> 92 - 99:</b> VLSB 2040 <br>
+  </ul> -->
+
+  <p>The final exam will cover material from all lectures, homeworks, discussion sections, and projects. Note that exam
+    questions will in many cases ask you to extend or combine basic ideas and algorithms from class. Make sure you
+    understand the fundamentals in addition to being able to procedurally execute algorithms. The exam will not test
+    your knowledge of Python, however questions may assume familiarity with the projects (see past exams for
+    examples).</p>
+
+  <p>The final will be closed notes, books, laptops, and people. However, you may use a three-page (six sides) cheat
+    sheet of your own design (group design ok but not recommended).</p>
+
+  <p>You may also use a <b>basic</b>, non-programmable calculator, which is not required, but which may
+    be helpful and is recommended. (No TI-86's, iPhones, etc.)</p>
+
+  <p>The practice final is available <a href="assets/exams/practice_final.pdf">here</a>.
+     This is meant for you to simulate exam environment and help assess where you are at. It is optional.
+     You will be able to earn 1pt of extra credit on the final by completing it before <b>May 6th, 11:59 pm</b> on <a href="https://www.gradescope.com/courses/35650/assignments/199745/submissions">Gradescope</a>.</p>
+
+  <p>In addition to regular office hours, we will be holding final review sessions during the normal discussion section
+    slots. There will be multiple types of review session, each covering one week's worth of materials through some
+    review and then a past exam question on that week's topic. You can attend as many as you like. The schedule is
+    below.</p>
+
+  <br/>
+  <h3>Review Sessions</h3>
+  <br/>
+  <table class="table table-bordered">
+    <tr>
+      <th>Topic</th>
+      <th>Time</th>
+      <th>Location</th>
+      <th>GSI</th>
+    </tr>
+    <tr>
+      <td>HMM</td>
+      <td>Tuesday, 9-10</td>
+      <td>Wheeler 130</td>
+      <td>Katie</td>
+    </tr>
+    <tr>
+      <td>Logic</td>
+      <td>Tuesday, 11-12</td>
+      <td>Dwinelle 182</td>
+      <td>Xiaocheng</td>
+    </tr>
+    <tr>
+      <td>MDP/RL</td>
+      <td>Tuesday, 11-12</td>
+      <td>Moffitt Library 103</td>
+      <td>Laura</td>
+    </tr>
+    <tr>
+      <td>HMM</td>
+      <td>Tuesday, 12-1</td>
+      <td>Etcheverry 3105</td>
+      <td>Ellen</td>
+    </tr>
+    <tr>
+      <td>Bayes Nets</td>
+      <td>Tuesday, 12-1</td>
+      <td>Moffitt Library 150D</td>
+      <td>Avi</td>
+    </tr>
+    <tr>
+      <td>Bayes Nets</td>
+      <td>Tuesday, 12-1</td>
+      <td>Soda 310</td>
+      <td>Rachel</td>
+    </tr>
+    <tr>
+      <td>HMM</td>
+      <td>Tuesday, 2-3</td>
+      <td>Etcheverry 3105</td>
+      <td>Tony</td>
+    </tr>
+    <tr>
+      <td>Logic</td>
+      <td>Tuesday, 2-3</td>
+      <td>Wheeler 130</td>
+      <td>Aditya</td>
+    </tr>
+    <tr>
+      <td>MDP/RL</td>
+      <td>Tuesday, 3-4</td>
+      <td>Barrows 185</td>
+      <td>Ronghang/Dequan</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td>Tuesday, 3-4</td>
+      <td>Etcheverry 3113</td>
+      <td>Murtaza</td>
+    </tr>
+    <tr>
+      <td>Bayes Nets</td>
+      <td>Tuesday, 4-5</td>
+      <td>Moffitt Library 150D</td>
+      <td>Wilson</td>
+    </tr>
+    <tr>
+      <td>MDP/RL</td>
+      <td>Tuesday, 4-5</td>
+      <td>Wheeler 224</td>
+      <td>Ronghang/Dequan</td>
+    </tr>
+    <tr>
+      <td>Logic</td>
+      <td>Tuesday, 4-5</td>
+      <td>Soda 405</td>
+      <td>Micah</td>
+    </tr>
+    <tr>
+      <td>MDP/RL</td>
+      <td>Wednesday, 9-10</td>
+      <td>Dwinelle 242</td>
+      <td>Frederik</td>
+    </tr>
+    <tr>
+      <td>HMM</td>
+      <td>Wednesday, 9-10</td>
+      <td>Wheeler 30</td>
+      <td>Michael</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td>Wednesday, 9-10</td>
+      <td>Hearst Field Annex B1</td>
+      <td>Austen</td>
+    </tr>
+    <tr>
+      <td>Bayes Nets</td>
+      <td>Wednesday, 10-11</td>
+      <td>Etcheverry 3113</td>
+      <td>Simin</td>
+    </tr>
+    <tr>
+      <td>Bayes Nets</td>
+      <td>Wednesday, 2-3</td>
+      <td>Moffitt Library 150D</td>
+      <td>Rishi</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td>Wednesday, 2-3</td>
+      <td>Latimer 105</td>
+      <td>Henry</td>
+    </tr>
+    <tr>
+      <td>MDP/RL</td>
+      <td>Wednesday, 3-4</td>
+      <td>Hearst Field Annex B1</td>
+      <td>Adam</td>
+    </tr>
+    <tr>
+      <td>Logic</td>
+      <td>Wednesday, 3-4</td>
+      <td>Evans 3</td>
+      <td>Dennis</td>
+    </tr>
+    <tr>
+      <td>HMM</td>
+      <td>Wednesday, 3-4</td>
+      <td>Etcheverry 3119</td>
+      <td>Charles</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td>Wednesday, 4-5</td>
+      <td>Evans 9</td>
+      <td>Alex</td>
+    </tr>
+    <tr>
+      <td>ML</td>
+      <td>Wednesday, 4-5</td>
+      <td>Wheeler 130</td>
+      <td>Jason</td>
+    </tr>
+  </table>
+
+    <br/>
+  <h3>Past Exams</h3>
+  <br/>
+  <table class="table table-bordered">
+    <tbody>
+    <tr>
+      <th>Semester</th>
+      <th>Midterm 1/Midterm</th>
+      <th>Midterm 2</th>
+      <th>Final</th>
+    </tr>
+    <tr>
+      <td>Fall 2018</td>
+      <td><a href="https://inst.eecs.berkeley.edu/~cs188/fa18/assets/exams/midterm1.pdf" target="_blank">Midterm</a>
+          (<a href="https://inst.eecs.berkeley.edu/~cs188/fa18/assets/exams/midterm1_solutions.pdf" target="_blank">solutions</a>)</td>
+      <td></td>
+      <td><a href="https://inst.eecs.berkeley.edu/~cs188/fa18/assets/exams/final_exam.pdf" target="_blank">Final</a>
+          (<a href="https://inst.eecs.berkeley.edu/~cs188/fa18/assets/exams/final_exam_solutions.pdf">solutions</a>)</td>
+    </tr>
+    <tr>
+      <td>Fall 2017</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa17_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa17_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa17_midterm2.pdf" target="_blank">Midterm
+        2</a>&nbsp;(&nbsp;<a
+          href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa17_midterm2_solutions.pdf"
+          target="_blank">solutions</a>&nbsp;)
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa17_final.pdf" target="_blank">Final</a>&nbsp;(&nbsp;<a
+          href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa17_final_solutions.pdf"
+          target="_blank">solutions</a>&nbsp;)
+      </td>
+    </tr>
+    <tr>
+      <td>Spring 2017</td>
+      <td><a href="https://hkn.eecs.berkeley.edu/examfiles/cs188_sp17_mt1.pdf" target="_blank">Midterm</a>&nbsp;(&nbsp;<a
+          href="https://tbp.berkeley.edu/exams/6119/download/" target="_blank">solutions</a>&nbsp;)<!--
+  <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm1.pdf" target="_blank">Midterm 1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm1_solutions.pdf" target="_blank">solutions</a> )
+  --></td>
+      <td></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp17_final.pdf" target="_blank">Final</a>&nbsp;(&nbsp;<a
+          href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp17_final_solutions.pdf"
+          target="_blank">solutions</a>&nbsp;)
+      </td>
+    </tr>
+    <tr>
+      <td>Fall 2016</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa16_midterm1.pdf" target="_blank">Midterm
+        1</a>&nbsp;(&nbsp;<a
+          href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa16_midterm1_solutions.pdf"
+          target="_blank">solutions</a>&nbsp;)<!--
+  <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm1.pdf" target="_blank">Midterm 1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm1_solutions.pdf" target="_blank">solutions</a> )
+  --></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa16_midterm2.pdf" target="_blank">Midterm
+        2</a>&nbsp;(&nbsp;<a
+          href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa16_midterm2_solutions.pdf"
+          target="_blank">solutions</a>&nbsp;)
+      </td>
+      <td><a href="https://hkn.eecs.berkeley.edu/examfiles/cs188_fa16_f_sol.pdf" target="_blank">Final</a>&nbsp;(&nbsp;<a
+          href="https://hkn.eecs.berkeley.edu/examfiles/cs188_fa16_f_sol.pdf" target="_blank">solutions</a>&nbsp;)
+      </td>
+    </tr>
+    <tr>
+      <td>Summer 2016</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su16_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <tr>
+      <td>Spring 2016</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp16_midterm.pdf" target="_blank">Midterm</a>&nbsp;(
+        <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp16_midterm_solutions.pdf"
+            target="_blank">solutions</a> )
+      </td>
+      <td></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp16_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp16_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!--<tr>-->
+    <!--<td>Fall 2015</td>-->
+    <!--<td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa15_midterm.pdf" target="_blank">Midterm</a>&nbsp;(&nbsp;<a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa15_midterm_solutions.pdf" target="_blank">solutions</a>&nbsp;)</td>-->
+    <!--<td></td>-->
+    <!--<td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa15_final.pdf" target="_blank">Final</a>&nbsp;(&nbsp;<a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa15_final_solutions.pdf" target="_blank">solutions</a>&nbsp;)</td>-->
+    <!--</tr>-->
+    <tr>
+      <td>Summer 2015</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su15_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su15_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su15_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su15_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su15_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su15_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <tr>
+      <td>Spring 2015</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp15_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp15_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp15_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp15_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp15_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp15_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <tr>
+      <td>Fall 2014</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa14_midterm.pdf" target="_blank">Midterm</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa14_midterm_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+      <td></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa14_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa14_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <tr>
+      <td>Summer 2014</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su14_midterm.pdf" target="_blank">Midterm</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su14_midterm_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+      <td></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su14_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/su14_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Spring 2014 -->
+    <tr>
+      <td>Spring 2014</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp14_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp14_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp14_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp14_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp14_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp14_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Fall 2013 -->
+    <tr>
+      <td>Fall 2013</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa13_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa13_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa13_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa13_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa13_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa13_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Spring 2013 -->
+    <tr>
+      <td>Spring 2013</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp13_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp13_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp13_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp13_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp13_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp13_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Fall 2012 -->
+    <tr>
+      <td>Fall 2012</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa12_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa12_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa12_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa12_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa12_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa12_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Spring 2012 -->
+    <tr>
+      <td>Spring 2012</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp12_midterm1.pdf" target="_blank">Midterm
+        1</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp12_midterm1_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp12_midterm2.pdf" target="_blank">Midterm
+        2</a> ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp12_midterm2_solutions.pdf"
+                    target="_blank">solutions</a> )
+      </td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp12_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp12_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Fall 2011 -->
+    <tr>
+      <td>Fall 2011</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa11_midterm.pdf" target="_blank">Midterm</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa11_midterm_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+      <td></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa11_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/fa11_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    <!-- Spring 2011 -->
+    <tr>
+      <td>Spring 2011</td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp11_midterm.pdf" target="_blank">Midterm</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp11_midterm_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+      <td></td>
+      <td><a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp11_final.pdf" target="_blank">Final</a>
+        ( <a href="https://s3-us-west-2.amazonaws.com/cs188websitecontent/exams/sp11_final_solutions.pdf"
+              target="_blank">solutions</a> )
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <p>Note that in previous years, topics were covered in varying orders, and so the midterm topics do not align
+  perfectly.</p>
+
+
+  <p>You can also look at <a href="http://www.eecs.berkeley.edu/~russell/classes/cs188/f05/#oldexams">much older
+  exams</a> from other versions of the class, but be aware that the syllabus has changed over time.
+</div>
+
+        </div>
+      </div>
+
+  </body>
+
+  <!-- <script>w3.includeHTML();</script> -->
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</html>
