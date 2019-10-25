@@ -1,7 +1,7 @@
 #coding=utf-8
 import os
 import re
-from googletrans import Translator
+from translate import translate
 from threadpool import ThreadPool, makeRequests
 import chardet
 
@@ -31,8 +31,7 @@ def gci(filepath):
 
 def Translate(source):
   source = source[0]
-  translator = Translator(service_urls=['translate.google.cn'])
-  target = translator.translate(source, src='en',dest='zh-cn').text + '\n'
+  target = translate(source)
   return target
 
 def translate_file(file):
