@@ -12,11 +12,10 @@ content = open(file).read()
 pattern = re.compile(link)
 match = re.findall(pattern, content)
 
-
 def download(m):
   os.system(f"wget -P {destination} {m}")
 
-pool = ThreadPool(8)
+pool = ThreadPool(5)
 requests = makeRequests(download,match)
 map(pool.putRequest, requests)
 pool.wait()
